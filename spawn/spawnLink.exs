@@ -3,6 +3,7 @@
 #the parent, then receive as many messages as are waiting. Trace what
 #you receive. Does it matter that you weren’t waiting for the notification
 #from the child when it exited?
+#
 
 defmodule SpawnLink do
 
@@ -12,6 +13,7 @@ defmodule SpawnLink do
   def child(pidparent)do
   #  sleep 500
     send(pidparent,"oi")
+    exit(:boom)
 
   end
 
